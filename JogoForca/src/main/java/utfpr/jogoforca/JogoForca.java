@@ -14,6 +14,7 @@ public class JogoForca {
         LetrasJogador letraEscolhida = new LetrasJogador();
         Caracteres caracteres = new Caracteres();
         StringBuilder palavraEscondida = new StringBuilder();
+        StringBuilder palavraEscolhida = new StringBuilder();
         
         int escolhaJogador;
         String aux;
@@ -32,15 +33,17 @@ public class JogoForca {
         
         System.out.println(aux);
         
-        caracteres.conversorCaracteres(aux);
+        palavraEscolhida = caracteres.conversorCaracteres(aux);
         
         boolean palavraDescoberta = false;
         
+                
         while (palavraDescoberta == false){
             letra = letraEscolhida.LetraEscolhida();
             
             //caracteres.acertoDeCaracteres(aux, letra);
-            System.out.println(palavraEscondida.append(caracteres.acertoDeCaracteres(aux, letra)));
+           palavraEscolhida = caracteres.acertoDeCaracteres(aux, palavraEscolhida, letra);
+           System.out.println(palavraEscolhida);
         }
         
 // Metodo para salvar a letra digitada
