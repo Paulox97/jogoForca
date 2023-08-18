@@ -16,15 +16,12 @@ public class JogoForca {
         StringBuilder palavraAux = new StringBuilder();
         StringBuilder palavraEscolhida = new StringBuilder();
         Set<Character> letrasDigitadas = new HashSet<>();
+        VidaJogador vidaJogador = new VidaJogador();
         
         int escolhaJogador;
-        int vidaJogador = 6;
+        int qtdVidas = 6;
         String aux;
         char letra;
-        
-        
-        
-        
         
         
         escolhaJogador = dificuldade.escolhaDificuldade();
@@ -53,29 +50,27 @@ public class JogoForca {
             
 
             letrasDigitadas.add(letra); //adiciona a letra digitada ao histórico de letras
-            
-            //Dar um jeito de fazer essa vida funcionar;
 
             
             palavraEscolhida = caracteres.acertoDeCaracteres(aux, palavraEscolhida, letra);
             
-            int cont = 0; //Inicio do contador que irá auxiliar se o usuário acertou alguma letra
-            for (int c = 0; c < aux.length(); c++){
-                if (letra != aux.charAt(c)){
-                    cont++; //Aqui pego o valor de quantas vezes a letra digitada existe dentro da palavra sorteada
-                }
-                if (cont == aux.length()){ //Caso a quantidade do contador for igual ao tamanho da palavra sorteada significa que o usuário errou, então descontamos uma vida
-                        vidaJogador--;
-                        System.out.println("Você perdeu uma vida \nVida atual: " + vidaJogador);
-                }
+            qtdVidas = vidaJogador.vidasDoJogador(aux, letra, qtdVidas);
+            
+            if (qtdVidas == 0){
+                System.out.println("QUE PENA, VOCÊ PERDEU O JOGO");
+                //System.out.println("-------------------------------------------------");
+                //System.out.println("GOSTARIA DE JOGAR NOVAMENTE?");
+                
+                break;
             }
             
             System.out.println(palavraEscolhida);
-            System.out.println("Letras digitadas: " + letrasDigitadas);
+            System.out.println("");
+            System.out.println("LETRAS DIGITADAS: " + letrasDigitadas);
         }
 //Vida -- feito
 //Completar a palavra
-//Boneco
+//Boneco -- feito
 
     }
 }
