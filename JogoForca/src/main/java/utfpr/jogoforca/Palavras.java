@@ -20,7 +20,7 @@ public class Palavras {
             return escolha;   
         }
         else {
-            String palavrasDificil[] = {"coqueteleira", "guarda-chuva", "metralhadora", "tornozeleira", "fita isolante"};
+            String palavrasDificil[] = {"coqueteleira", "guarda-chuva", "metralhadora", "tornozeleira", "fita-isolante"};
             String escolha = palavrasDificil[gerador.nextInt(0, 4)];
             return escolha;
         }

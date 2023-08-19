@@ -10,10 +10,10 @@ public class LetrasJogador {
     
     public char LetraEscolhida(){
         
-        System.out.println("\nInforme uma letra: ");
+        System.out.println("\nINFORME UMA LETRA: ");
         String letraUsuario = ler.next();
         while (letraUsuario.length() > 1){
-            System.out.println("Você digitou mais de uma letra, por gentileza digite somente uma letra: ");
+            System.out.println("VOCÊ DIGITOU MAIS DE UMA LETRA, POR GENTILEZA DIGITE SOMENTE UMA: ");
             letraUsuario = ler.next();
         }
         char primeiraLetra = letraUsuario.charAt(0);
