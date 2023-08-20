@@ -17,7 +17,6 @@ public class LetrasJogador {
             letraUsuario = ler.next();
         }
         char primeiraLetra = letraUsuario.charAt(0);
-        
         return primeiraLetra;
     }
     

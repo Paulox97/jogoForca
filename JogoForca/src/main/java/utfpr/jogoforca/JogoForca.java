@@ -13,7 +13,6 @@ public class JogoForca {
         Dificuldade dificuldade = new Dificuldade();
         LetrasJogador letraEscolhida = new LetrasJogador();
         Caracteres caracteres = new Caracteres();
-        StringBuilder palavraAux = new StringBuilder();
         StringBuilder palavraEscolhida = new StringBuilder();
         Set<Character> letrasDigitadas = new HashSet<>();
         VidaJogador vidaJogador = new VidaJogador();
@@ -64,12 +63,19 @@ public class JogoForca {
                 break;
             }
             
+            System.out.println("-------------------------------------------------");
             System.out.println(palavraEscolhida);
-            System.out.println("");
+            System.out.println("-------------------------------------------------");
             System.out.println("LETRAS DIGITADAS: " + letrasDigitadas);
+            
+            if (palavraEscolhida.toString().equals(aux)){
+                System.out.println("-------------------------------------------------");
+                System.out.println("PARABÉNS VOCÊ VENCEU O JOGO!");
+                break;
+            }
         }
 //Vida -- feito
-//Completar a palavra
+//Completar a palavra -- feito
 //Boneco -- feito
 
     }
