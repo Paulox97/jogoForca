@@ -32,7 +32,7 @@ public class JogoForca {
         //Sortea a palavra de acordo com a dificuldade escolhida pelo jogado e transfoma em minúscula
         aux = palavra.sorteador(escolhaJogador).toLowerCase();
         
-        System.out.println(aux);
+        //System.out.println(aux);
 
         //prepara a variável de resposta com "_" do tamanho da palavra escolhida
         palavraEscolhida = caracteres.conversorCaracteres(aux);
@@ -75,9 +75,5 @@ public class JogoForca {
                 break;
             }
         }
-//Vida -- feito
-//Completar a palavra -- feito
-//Boneco -- feito
-
     }
 }

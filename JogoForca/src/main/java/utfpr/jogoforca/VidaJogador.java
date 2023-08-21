@@ -78,26 +78,5 @@ public class VidaJogador {
     }
 
     return qtdVidas;
-}
-    
-//    public int vidasDoJogador(String aux, char letra, int qtdVidas){
-//        int cont = 0; //Inicio do contador que irá auxiliar se o usuário acertou alguma letra
-//            for (int c = 0; c < aux.length(); c++){
-//                if (letra != aux.charAt(c)){
-//                    
-//                    cont++; //Aqui pego o valor de quantas vezes a letra digitada existe dentro da palavra sorteada
-//                    
-//                }
-//                if (cont == aux.length()){ //Caso a quantidade do contador for igual ao tamanho da palavra sorteada significa que o usuário errou, então descontamos uma vida
-//                        qtdVidas--;
-//                        System.out.println("-------------------------------------------------");
-//                        System.out.println("A LETRA ESCOLHIDA NÃO EXISTE NA PALAVRA SORTEADA.");
-//                        System.out.println("             VOCÊ PERDEU UMA VIDA.");
-//                        System.out.println("                 VIDA ATUAL: " + vidaJogador);
-//                        System.out.println("-------------------------------------------------");
-//                }
-//            }
-//        return qtdVidas;
-//    }
-    
+}   
 }
