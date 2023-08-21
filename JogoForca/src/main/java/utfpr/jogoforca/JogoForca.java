@@ -29,7 +29,7 @@ public class JogoForca {
         System.out.println("           INICIANDO O JOGO");
         System.out.println("---------------------------------------");
         
-        aux = palavra.sorteador(escolhaJogador);
+        aux = palavra.sorteador(escolhaJogador).toLowerCase();
         
         System.out.println(aux);
         
@@ -39,7 +39,7 @@ public class JogoForca {
         
                 
         while (palavraDescoberta == false){
-            letra = letraEscolhida.LetraEscolhida();
+            letra = Character.toLowerCase(letraEscolhida.LetraEscolhida());
 
             if(letrasDigitadas.contains(letra)){ //verifica se a letra digitada já foi digitada antes
                 System.out.println("Letra já digitada");
